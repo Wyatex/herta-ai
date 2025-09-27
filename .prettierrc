@@ -1,0 +1,8 @@
+{
+    "objectWrap": "preserve",
+    "quoteProps": "as-needed",
+    "semi": false,
+    "singleQuote": true,
+    "arrowParens": "always",
+    "trailingComma": "es5"
+}
