@@ -1,8 +1,8 @@
 {
   "name": "@herta-ai/cli",
   "type": "module",
-  "module": "./dist/index.mjs",
   "main": "./dist/index.cjs",
+  "module": "./dist/index.mjs",
   "types": "./dist/index.d.ts",
   "files": [
     "dist"
@@ -11,10 +11,10 @@
     "build": "unbuild",
     "dev": "unbuild --stub"
   },
-  "devDependencies": {
-    "@types/bun": "latest"
-  },
   "peerDependencies": {
     "typescript": "^5"
+  },
+  "devDependencies": {
+    "@types/bun": "latest"
   }
 }

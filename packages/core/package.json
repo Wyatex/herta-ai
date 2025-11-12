@@ -1,8 +1,19 @@
 {
   "name": "herta-ai",
   "type": "module",
-  "module": "./dist/index.mjs",
+  "exports": {
+    ".": {
+      "types": {
+        "import": "./dist/index.d.mts",
+        "require": "./dist/index.d.cts",
+        "default": "./dist/index.d.ts"
+      },
+      "import": "./dist/index.mjs",
+      "require": "./dist/index.cjs"
+    }
+  },
   "main": "./dist/index.cjs",
+  "module": "./dist/index.mjs",
   "types": "./dist/index.d.ts",
   "files": [
     "dist"
@@ -11,18 +22,9 @@
     "build": "unbuild",
     "dev": "unbuild --stub"
   },
-  "exports": {
-    ".": {
-      "types": {
-        "default": "./dist/index.d.ts",
-        "import": "./dist/index.d.mts",
-        "require": "./dist/index.d.cts"
-      },
-      "import": "./dist/index.mjs",
-      "require": "./dist/index.cjs"
-    }
-  },
   "dependencies": {
+    "@xsai/generate-text": "^0.4.0-beta.9",
+    "@xsai/shared-chat": "^0.4.0-beta.9",
     "hookable": "^5.5.3"
   }
 }

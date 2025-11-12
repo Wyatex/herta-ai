@@ -1,8 +1,15 @@
 {
   "name": "@herta-ai/provider-xsai",
   "type": "module",
-  "module": "./dist/index.mjs",
+  "exports": {
+    "./openai": {
+      "types": "./dist/openai/index.d.mts",
+      "import": "./dist/openai/index.mjs",
+      "require": "./dist/openai/index.cjs"
+    }
+  },
   "main": "./dist/index.cjs",
+  "module": "./dist/index.mjs",
   "types": "./dist/index.d.ts",
   "files": [
     "dist"
@@ -11,10 +18,18 @@
     "build": "unbuild",
     "dev": "unbuild --stub"
   },
-  "devDependencies": {
-    "@types/bun": "latest"
-  },
   "peerDependencies": {
     "typescript": "^5"
+  },
+  "dependencies": {
+    "@herta-ai/types": "workspace:*",
+    "@xsai/generate-text": "^0.4.0-beta.9",
+    "@xsai/shared": "^0.4.0-beta.9",
+    "@xsai/stream-text": "^0.4.0-beta.9",
+    "@xsai/utils-chat": "^0.4.0-beta.9",
+    "xsschema": "^0.4.0-beta.9"
+  },
+  "devDependencies": {
+    "@types/bun": "latest"
   }
 }

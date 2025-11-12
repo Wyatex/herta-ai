@@ -1,5 +1,5 @@
 {
-  "name": "@herta-ai/provider-langchain",
+  "name": "@herta-ai/types",
   "type": "module",
   "main": "./dist/index.cjs",
   "module": "./dist/index.mjs",
